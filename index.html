@@ -21,10 +21,9 @@
 	<link type="text/css" rel="stylesheet" href="theme/frontend/css/font-awesome.min.css" />
 	<script>
 		function waitJquery(callbackwaitJquery) {
-		    var i = 0;
-            var interval = setInterval biến(function() {
+		    var i = 0; /* Bị lỗi gọi 2 lần nên cần biến này */
+		    var interval = setInterval(function() {
 		        if (window.jQuery) {
-                    // tests
 		            jQuery(document).ready(function() {
 		                if (i++ == 0) {
 		                    callbackwaitJquery();
@@ -43,6 +42,7 @@
 		<div class="box header clear">
 			<div class="container">
 				<div class="row">
+
 					<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
 						<div class="row">
 							<div class="box-logo-top">
