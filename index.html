@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<base href="" />
+	<title>ABSoft ERP - Phần mềm quản trị doanh nghiệp</title>
+	<meta name="robots" content="index, follow">
+	<meta name="description" content="">
+	<link rel="canonical" href="http://absofterp.vn" />
+	<link rel="shortcut icon" href="theme/frontend/images/favicon.png">
+	<link type="text/css" rel="stylesheet" href="theme/frontend/css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="theme/frontend/css/menu-mobile.css" />
+	<link type="text/css" rel="stylesheet" href="theme/frontend/css/animate.css" />
+	<link type="text/css" rel="stylesheet" href="theme/frontend/css/owl.carousel.min.css" />
+	<!-- <link type="text/css" rel="stylesheet" href="theme/frontend/css/owl.theme.css" /> -->
+	<link type="text/css" rel="stylesheet" href="theme/frontend/css/owl.theme.default.min.css" />
+	<link type="text/css" rel="stylesheet" href="theme/frontend/css/owl.transitions.min.css" />
+	<link type="text/css" rel="stylesheet" href="theme/frontend/css/style.css" />
+	<link type="text/css" rel="stylesheet" href="theme/frontend/css/font-awesome.min.css" />
+	<script>
+		function waitJquery(callbackwaitJquery) {
+		    var i = 0; /* Bị lỗi gọi 2 lần nên cần biến này */
+		    var interval = setInterval(function() {
+		        if (window.jQuery) {
+		            jQuery(document).ready(function() {
+		                if (i++ == 0) {
+		                    callbackwaitJquery();
+		                }
+		                clearInterval(interval);
+		            });
+		        }
+		    }, 10);
+		}
+	</script>
+	<script src="theme/frontend/js/jquery-2.2.1.min.js"></script>
+	<script src="theme/frontend/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<header class="clear">
+		<div class="box header clear">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+						<div class="row">
+							<div class="box-logo-top">
+								<a href="index.html" title="Site name" class="box">
+									<img src="theme/frontend/images/logo_absoft.png" alt="Site name">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-10 col-md-9 col-sm-9 col-xs-12 box-menu">
+						<div class="row hidden-sm hidden-xs">
+							<nav class="box-menu-top">
+								<div class="list-menu-1">
+
+									<div class="item-menu-1">
+										<a class="link-menu-1" onclick="scrollDiv('quan_tri_thong_minh')" href="#quan_tri_thong_minh" title="Title">Quản trị thông minh</a>
+									</div><!-- End item-menu-1 -->
+									
+									<div class="item-menu-1">
+										<a class="link-menu-1" onclick="scrollDiv('vuong_mac')" href="#vuong_mac" title="Title">Vướng mắc</a>
+									</div><!-- End item-menu-1 -->
+									
+									<div class="item-menu-1">
+										<a class="link-menu-1" onclick="scrollDiv('giai_phap')" href="#giai_phap" title="Title">Giải pháp</a>
+									</div><!-- End item-menu-1 -->
+
+									<div class="item-menu-1">
+										<a class="link-menu-1" onclick="scrollDiv('bang_gia')" href="#bang_gia" title="Title">Bảng giá</a>
+									</div><!-- End item-menu-1 -->
+
+									<div class="item-menu-1">
+										<a class="link-menu-1" onclick="scrollDiv('khach_hang')" href="#khach_hang" title="Title">Khách hàng</a>
+									</div><!-- End item-menu-1 -->
+
+									<div class="item-menu-1">
+										<a class="link-menu-1" href="#lien-he" data-toggle="modal" data-target="#ABSoftModal" title="Title">Liên hệ</a>
+									</div><!-- End item-menu-1 -->
+
+								</div><!-- End list-menu-1 -->
+							</nav>
+						</div>
+						
+						<!-- Start menu mobile screen width < 768px -->
+						<div class="hidden-lg hidden-md mgbt20" id="cssmenu">
+							<ul class="menu-mobile mgbt20">
+							   <li><a href="#quan_tri_thong_minh" title="Title">Quản trị thông minh</a></li>
+							   <li><a href="#vuong_mac" title="Title">Vướng mắc</a></li>
+							   <li><a href="#giai_phap" title="Title">Giải pháp</a></li>
+							   <li><a href="#bang_gia" title="Title">Bảng giá</a></li>
+							   <li><a href="#khach_hang" title="Title">Khách hàng</a></li>
+							   <li><a href="#lien_he" data-toggle="modal" data-target="#ABSoftModal" title="Title">Liên hệ</a></li>
+							</ul>
+						</div><!-- End menu mobile -->
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</header><!-- End header -->
+
+
+
+	<section class="box box-banner-top clear">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6"></div>
+				<div class="col-md-6">
+					<h1 class="title-banner">ABSoft ERP Lĩnh vực công trình dự án</h1>
+					<div class="box box-bi-quyet mgbt20">
+						<p class="box title-bi-quyet">Bí quyết vận hành doanh nghiệp thông minh</p>
+						<div class="item-bi-quyet"><i class="fa fa-bar-chart" aria-hidden="true"></i><p>Gia tăng lợi nhuận doanh nghiệp lên tới <strong style="color: #cc0000;font-size:18px">10 - 30%</strong></p></div>
+						<div class="item-bi-quyet"><i class="fa fa-handshake-o" aria-hidden="true"></i><p>Liên kết tổng hợp sức mạnh của phòng ban </p></div>
+						<div class="item-bi-quyet"><i class="fa fa-snowflake-o" aria-hidden="true"></i><p>Phân tích chuyên sâu từng nghiệp vụ</p></div>
+						<div class="item-bi-quyet"><i class="fa fa-usd" aria-hidden="true"></i><p>Tối tưu hóa chi phí của doanh nghiệp</p></div>
+					</div>
+					<div class="box mgbt10">
+						<a data-toggle="modal" data-target="#ABSoftModal" class="btn btn-action btn-banner" title="Title">Nhận ưu đãi ngay hôm nay</a>
+					</div>
+					<div class="box">
+						<span class="txt-hotline"><strong>HOTLINE:</strong> 096.639.9367- 096.409.4499</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<article class="box article-1 clear pdtb40 bg-white" id="quan_tri_thong_minh">
+		<div class="container">
+			<h2 class="title-article pdtb20 text-center">Thế nào là quản trị doanh nghiệp thông minh ?</h2>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="box box-cong-viec-hien-nay mgbt20">
+						<h3 class="box title-cong-viec line_title clear mgbt40 text-center">Thực hiện công việc hiện nay</h3>
+						<div class="box box-list-cong-viec">
+
+							<div class="div item-cong-viec clear mgbt20">
+								<div class="box col-l-cong-viec">
+									<img src="theme/frontend/images/icon_qt_1.png" alt="" class="" alt="">
+								</div>
+								<div class="box col-r-cong-viec">
+									<p>Tiếp nhận và trao đổi thông tin công việc qua nói miệng, gửi mail, skype,…nên thường không đầy đủ, dễ thất lạc</p>
+								</div>
+							</div><!-- End item -->
+
+							<div class="div item-cong-viec clear mgbt20">
+								<div class="box col-l-cong-viec">
+									<img src="theme/frontend/images/icon_qt_2.png" alt="" class="" alt="">
+								</div>
+								<div class="box col-r-cong-viec">
+									<p>Thực hiện công việc nhưng không có sự phản hồi lại kịp thời khiến năng suất lao động kém</p>
+								</div>
+							</div><!-- End item -->
+
+							<div class="div item-cong-viec clear mgbt20">
+								<div class="box col-l-cong-viec">
+									<img src="theme/frontend/images/icon_qt_3.png" alt="" class="" alt="">
+								</div>
+								<div class="box col-r-cong-viec">
+									<p>Chưa có nhiều thông tin xác thực để đánh giá được hiệu quả thực hiện công việc</p>
+								</div>
+							</div><!-- End item -->
+
+							<div class="div item-cong-viec clear mgbt20">
+								<div class="box col-l-cong-viec">
+									<img src="theme/frontend/images/icon_qt_4.png" alt="" class="" alt="">
+								</div>
+								<div class="box col-r-cong-viec">
+									<p>Không có dữ liệu để phân tích hoặc dữ liệu phân tích rời rạc, không đồng nhất trên một hệ thống</p>
+								</div>
+							</div><!-- End item -->
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="box box-viec-thong-minh">
+						<h3 class="box title-cong-viec line_title clear mgbt40 text-center">Thực hiện công việc thông minh</h3>
+						<div class="box cong-viec-thong-minh mgbt20">
+							<img src="theme/frontend/images/cong_viec_thong_minh.png" alt="Title" class="responsive">
+						</div>
+						<p class="text-center"><i class="fa fa-quote-left"></i> Tất cả thông tin công việc của các phòng ban được đưa lên cùng hệ thống để trao đổi, bảo cáo, đánh giá phân tích <i class="fa fa-quote-right"></i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article class="box article-1 clear pdtb70 bg_van_de" id="vuong_mac">
+		<div class="container">
+			<h2 class="title-article pdtb40 text-center white">Những vấn đề của doanh nghiệp lĩnh vực sản xuất</h2>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6">
+					<div class="box item-count">
+						<div class="box box-number">
+							<p>1</p>
+						</div>
+						<div class="box box-info-r">
+							<h5 class="title_van_de">Đánh giá hiệu quả công việc</h5>
+							<div class="box">
+								<p>Sự đánh giá hiệu quả công việc với doanh nghiệp lĩnh vực phân phối hiện nay còn dựa trên nhiều ý kiến chủ quan và không có thông tin và cơ sở xác đáng</p>
+							</div>
+						</div>
+					</div><!-- End item-count -->
+					<div class="box item-count">
+						<div class="box box-number">
+							<p>2</p>
+						</div>
+						<div class="box box-info-r">
+							<h5 class="title_van_de">Khó nắm bắt tình hình hoạt dộng doanh nghiệp</h5>
+							<div class="box">
+								<p>Sự đánh giá hiệu quả công việc với doanh nghiệp lĩnh vực phân phối hiện nay còn dựa trên nhiều ý kiến chủ quan và không có thông tin và cơ sở xác đáng</p>
+							</div>
+						</div>
+					</div><!-- End item-count -->
+					<div class="box item-count">
+						<div class="box box-number">
+							<p>3</p>
+						</div>
+						<div class="box box-info-r">
+							<h5 class="title_van_de">Sự liên kết giữa các bộ phận với nhau gặp nhiều khó khăn</h5>
+							<div class="box">
+								<p>Sự đánh giá hiệu quả công việc với doanh nghiệp lĩnh vực phân phối hiện nay còn dựa trên nhiều ý kiến chủ quan và không có thông tin và cơ sở xác đáng</p>
+							</div>
+						</div>
+					</div><!-- End item-count -->
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6">
+					<div class="box item-count">
+						<div class="box box-number">
+							<p>4</p>
+						</div>
+						<div class="box box-info-r">
+							<h5 class="title_van_de">Đánh giá hiệu quả công việc</h5>
+							<div class="box">
+								<p>Sự đánh giá hiệu quả công việc với doanh nghiệp lĩnh vực phân phối hiện nay còn dựa trên nhiều ý kiến chủ quan và không có thông tin và cơ sở xác đáng</p>
+							</div>
+						</div>
+					</div><!-- End item-count -->
+					<div class="box item-count">
+						<div class="box box-number">
+							<p>5</p>
+						</div>
+						<div class="box box-info-r">
+							<h5 class="title_van_de">Khó nắm bắt tình hình hoạt dộng doanh nghiệp</h5>
+							<div class="box">
+								<p>Sự đánh giá hiệu quả công việc với doanh nghiệp lĩnh vực phân phối hiện nay còn dựa trên nhiều ý kiến chủ quan và không có thông tin và cơ sở xác đáng</p>
+							</div>
+						</div>
+					</div><!-- End item-count -->
+					<div class="box item-count">
+						<div class="box box-number">
+							<p>6</p>
+						</div>
+						<div class="box box-info-r">
+							<h5 class="title_van_de">Sự liên kết giữa các bộ phận với nhau gặp nhiều khó khăn</h5>
+							<div class="box">
+								<p>Sự đánh giá hiệu quả công việc với doanh nghiệp lĩnh vực phân phối hiện nay còn dựa trên nhiều ý kiến chủ quan và không có thông tin và cơ sở xác đáng</p>
+							</div>
+						</div>
+					</div><!-- End item-count -->
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<div class="box pdtb40" id="giai_phap">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<h2 class="box title-article line_bottom pdtb20 mgbt30">Giải pháp quản trị doanh nghiệp<span class="txt_highlight"> - ABSoft ERP</span></h2>
+					<div class="box box-view-video">
+						<!-- <img src="theme/frontend/images/img_video_01.jpg" alt="Title" class="responsive"> -->
+						<iframe width="100%" height="322" src="https://www.youtube.com/embed/6HM-a3Dsaho?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-6 box_value">
+					<h2 class="box title-article line_bottom pdtb20 mgbt30">Giá trị<span class="txt_highlight"> ABSoft ERP</span> mang lại</h2>
+					<div class="box box-content">
+						<p class="item_value">Một giải pháp thay thế toàn bộ các phần mềm nhỏ lẻ: Phần mềm Quản lí kho, Phần mềm Kế toán, Phần mềm Quản lí Hành chính - Nhân sự, Phần mềm mua hàng, Phần mềm Bán hàng</p>
+						<p class="item_value">Dòng thông tin xuyên suốt liên kết hoạt động của các phòng ban</p>
+						<p class="item_value">Tối ưu hóa chi phí, tăng năng suất lao động mỗi nhân viên lên tới</p>
+						<p class="item_value">Kiểm soát mọi hoạt động trong doanh nghiệp và hỗ trợ ra quyết định chuẩn xác mọi lúc, mọi nơi.</p>
+						<p class="item_value">Giúp doanh nghiệp quản trị, hoạch định nguồn lực: nhân sự, chi phí,…</p>
+						<p class="item_value">Tăng tính minh bạch trong doanh nghiệp </p>
+						<p class="item_value">Linh hoạt thay đổi để phù hợp với sự phát triển của hệ thống quản trị</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<article class="box article-1 clear pdtb40 bg-white" id="bang_gia">
+		<div class="container">
+			<h2 class="title-article pdbt40 bold text-center">Có 3 cấp độ giải pháp để cho bạn lựa chọn</h2>
+			<div class="box">
+				<div class="box box-choose-solution table-shop-scroll">
+					<table class="table table-condensed table-hover table-responsive table_price">
+					    <thead>
+					        <tr class="uppercase">
+					            <th class="text-center" style="background:#c4e4f6;font-size:30px;vertical-align:middle;color:#0675b5;">
+					            	<p style="font-size:18px;">Công trình</p>
+					            	<strong>Dự án</strong>
+					            </th>
+					            <th class="text-center" style="background:#9ad1f0;font-size:30px;vertical-align:middle;"><strong>Starter</strong></th>
+					            <th class="text-center white" style="background:#0792e2;font-size:30px;vertical-align:middle;"><strong>Standard</strong></th>
+					            <th class="text-center white" style="background:#0675b5;font-size:30px;vertical-align:middle;"><strong>Advance</strong></th>
+					        </tr>
+					        <tr>
+					            <td rowspan="2" style="background: #eaf1f5;vertical-align:middle;">
+					            	<div class="div box-img-tb">
+					            		<img src="theme/frontend/images/logo-tble.png" alt="Title" class="scaledown">
+					            	</div>
+					            </td>
+					            <td style="background:#b9def3;color:#484948; padding-top:20px">
+					            	<div class="box">
+					            		<p>Gói giải pháp: <strong>10 triệu</strong></p>
+										<p>Giá trị User: <strong>2tr/ User</strong></p>
+										<p>Giá đào tạo : <strong>5tr/ Ngày</strong></p>
+										<p>Tư vấn chuẩn hóa doanh nghiệp: <strong>5tr/ ngày</strong></p>
+										<div class="box pdtb20 text-center"><a class="btn btn-action bold" style="width:95%;" data-toggle="modal" data-target="#ABSoftModal">Đăng ký để nhận ưu đãi</a></div>
+					            	</div>
+					            </td>
+					            <td class="white" style="background: #20a2ec; padding-top:20px">
+					            	<div class="box">
+					            		<p>Gói giải pháp: <strong>10 triệu</strong></p>
+										<p>Giá trị User: <strong>2tr/ User</strong></p>
+										<p>Giá đào tạo : <strong>5tr/ Ngày</strong></p>
+										<p>Tư vấn chuẩn hóa doanh nghiệp: <strong>5tr/ ngày</strong></p>
+										<div class="box pdtb20 text-center"><a class="btn btn-action bold" style="width:95%;" data-toggle="modal" data-target="#ABSoftModal">Đăng ký để nhận ưu đãi</a></div>
+					            	</div>
+					            </td>
+					            <td class="white" style="background: #007fc8; padding-top:20px">
+					            	<div class="box">
+					            		<p>Gói giải pháp: <strong>10 triệu</strong></p>
+										<p>Giá trị User: <strong>2tr/ User</strong></p>
+										<p>Giá đào tạo : <strong>5tr/ Ngày</strong></p>
+										<p>Tư vấn chuẩn hóa doanh nghiệp: <strong>5tr/ ngày</strong></p>
+										<div class="box pdtb20 text-center"><a class="btn btn-action bold" style="width:95%;" data-toggle="modal" data-target="#ABSoftModal">Đăng ký để nhận ưu đãi</a></div>
+					            	</div>
+					            </td>
+					        </tr>
+					        <tr>
+					            <td style="background: #b9def3">
+					            	<div class="box pdtb10">
+					            		<p style="margin-bottom:10px;">Quà tặng trị giá: <strong>10 triệu</strong></p>
+					            		<p>Tặng 5 users trị giá <strong>10 triệu</strong></p>
+					            	</div>
+					            </td>
+					            <td class="white" style="background: #20a2ec">
+					            	<div class="box pdtb10">
+					            		<p style="margin-bottom:10px;">Quà tặng trị giá: <strong>10 triệu</strong></p>
+					            		<p>Tặng <strong>10 users</strong> trị giá <strong>20 triệu</strong></p>
+										<p>Tặng <strong>1 ngày</strong> tư vấn chuẩn hóa doanh nghiệp trị giá <strong>5 triệu</strong></p>
+					            	</div>
+					            </td>
+					            <td class="white" style="background: #007fc8">
+					            	<div class="box pdtb10">
+					            		<p style="margin-bottom:10px;">Quà tặng trị giá: <strong>10 triệu</strong></p>
+					            		<p>Tặng <strong>15 users</strong> trị giá <strong>30 triệu</strong></p>
+										<p>Tặng <strong>1 ngày</strong> tư vấn chuẩn hóa doanh nghiệp trị giá <strong>5 triệu</strong></p>
+					            	</div>
+					            </td>
+					        </tr>
+					    </thead>
+					    <tbody class="" id="tbody">
+					        <tr class="divider">
+					            <td colspan="8"><strong>Kinh doanh</strong></td>
+					        </tr>
+					        <tr class="tr_first">
+					            <td>Hồ sơ kh&aacute;ch h&agrave;ng</td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					        </tr>
+					        <tr>
+					            <td>Hồ sơ sản phẩm</td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					        </tr>
+					        <tr>
+					            <td>Quản trị doanh số : Theo nh&acirc;n vi&ecirc;n,theo v&ugrave;ng miền, theo nh&oacute;m kh&aacute;ch h&agrave;ng, theo nh&oacute;m sản phẩm</td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					        </tr>
+					        <tr>
+					            <td>Đ&aacute;nh gi&aacute;, ph&acirc;n loại kh&aacute;ch h&agrave;ng</td>
+					            <td></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					        </tr>
+					        <tr>
+					            <td>Quản lý báo giá</td>
+					            <td></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					        </tr>
+					        <tr>
+					            <td>Hệ thống báo cáo 12 tháng theo năm</td>
+					            <td></td>
+					            <td></td>
+					            <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+					        </tr>
+				            <tr class="divider">
+				                <td colspan="8"><strong>Kế to&aacute;n t&agrave;i ch&iacute;nh</strong></td>
+				            </tr>
+				            <tr>
+				                <td>Chi tiết thu - chi</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Tổng hợp quỹ tiền</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Chi tiết xuất - nhập</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Tổng hợp tồn kho</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý tạm ứng</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Chi tiết chi phí</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Công nợ phải thu</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Công nợ phải trả</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Tính giá vốn</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Kết quả kinh doanh hàng tháng</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Tính lương nhân viên</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Hệ thống báo cáo 12 tháng theo năm</td>
+					            <td></td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr class="divider">
+				                <td colspan="4"><strong>Hàng chính nhân sự</strong></td>
+				            </tr>
+				            <tr>
+				                <td>Hồ sơ nhân sự</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý công văn đến, công văn đi</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý chấm công, ngày nghỉ, đi muộn</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý văn phòng phẩm</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Hợp đồng nhân sự</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Hệ thống báo cáo 12 tháng theo năm</td>
+					            <td></td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr class="divider">
+				                <td colspan="4"><strong>Mua hàng</strong></td>
+				            </tr>
+				            <tr>
+				                <td>Danh sách nhà cung cấp</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý đơn đặt hàng mua</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý chi phí mua hàng theo nhà cung cấp/loại sản phẩm</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Hệ thống báo cáo 12 tháng theo năm</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr class="divider">
+				                <td colspan="4"><strong>Công trình thi công</strong></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý nghiệm thu bàn giao</td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Kế hoạch thi công</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý thực tế thi công</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý nghiệm thu sơ bộ</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Hệ thống báo cáo 12 tháng theo năm</td>
+					            <td></td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr class="divider">
+				                <td colspan="4"><strong>Kỹ thuật thiết kế</strong></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý lỗi vật tư, lỗi thi công</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý thiết kế</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Quản lý vật tư công trình</td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+				            <tr>
+				                <td>Hệ thống báo cáo 12 tháng theo năm</td>
+					            <td></td>
+					            <td></td>
+				                <td><img src="theme/frontend/images/ok.png" alt="ok"></td>
+				            </tr>
+					    </tbody>
+					</table>
+				</div>
+				<div class="box before_table">
+					<span class="btn_show_table"></span>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article class="box article-1 clear">
+		<div class="container">
+			<h2 class="title-article pdtb40 text-center">Trải nghiệm khi sử dụng <span class="txt_highlight"> ABSoft ERP</span></h2>
+		</div>
+		<div class="box clear pdtb50 bg-blue">
+
+			<div class="container">
+				<div class="row">
+					<div class="box slide-trai-nghiem">
+						<div class="box">
+							<div class="col-md-6 col-sm-6">
+								<div class="box box-view-video">
+									<!-- <img src="theme/frontend/images/img_video_01.jpg" alt="Title" class="responsive"> -->
+									<iframe width="100%" height="312" src="https://www.youtube.com/embed/6HM-a3Dsaho?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="box box-content">
+									<h3 class="mgt0 mgbt20"><a class="title-video-item" href="#" title="Title">GIÁM ĐỐC CÔNG TY CỔ PHẦN DỊCH VỤ VIETLIFE LÊ XUÂN THỦY</a></h3>
+									<div class="box box-info">
+										<p style="margin-bottom: 20px;">Ở Việt Nam nhiều doanh nghiệp không nhìn thấy lợi ích của việc áp dụng phần mềm và nghĩ rằng tốn kém chi phí. Tuy nhiên với chúng tôi thì hệ thống ABSoft ERP đã giải quyết được nhiều vấn đề phức tạp của doanh nghiệp. Người sử dụng có thể làm việc ở bất cứ đâu khi kết nối được internet và điểm hay nhất là ABSoft ERP có thể phát triển thêm các tính năng cho phần mềm theo yêu cầu của Doanh nghiệp. Cảm ơn ABSoft Group đã đồng hành với chúng tôi, chúc các bạn ngày càng phát triển và thành công.</p>
+										<a href="#" title="Title" class="readmore" style="margin-bottom: 10px;">Xem thêm thông tin chi tiết doanh nghiệp Vietlife thông qua:</a>
+										<p><i class="fa fa-phone"></i> Điện thoại: (+84) 4 3791 8661</p>
+									</div>
+								</div>
+							</div>
+						</div><!-- End Item slide -->
+
+						<div class="box">
+							<div class="col-md-6 col-sm-6">
+								<div class="box box-view-video">
+									<!-- <img src="theme/frontend/images/img_video_01.jpg" alt="Title" class="responsive"> -->
+									<iframe width="100%" height="312" src="https://www.youtube.com/embed/WsraaDbqazM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="box box-content">
+									<h3 class="mgt0 mgbt20"><a class="title-video-item" href="#" title="Title">GIÁM ĐỐC CÔNG TY CỔ PHẦN DỊCH VỤ VIETLIFE LÊ XUÂN THỦY</a></h3>
+									<div class="box box-info">
+										<p style="margin-bottom: 20px;">Ở Việt Nam nhiều doanh nghiệp không nhìn thấy lợi ích của việc áp dụng phần mềm và nghĩ rằng tốn kém chi phí. Tuy nhiên với chúng tôi thì hệ thống ABSoft ERP đã giải quyết được nhiều vấn đề phức tạp của doanh nghiệp. Người sử dụng có thể làm việc ở bất cứ đâu khi kết nối được internet và điểm hay nhất là ABSoft ERP có thể phát triển thêm các tính năng cho phần mềm theo yêu cầu của Doanh nghiệp. Cảm ơn ABSoft Group đã đồng hành với chúng tôi, chúc các bạn ngày càng phát triển và thành công.</p>
+										<a href="#" title="Title" class="readmore" style="margin-bottom: 10px;">Xem thêm thông tin chi tiết doanh nghiệp Vietlife thông qua:</a>
+										<p><i class="fa fa-phone"></i> Điện thoại: (+84) 4 3791 8661</p>
+									</div>
+								</div>
+							</div>
+						</div><!-- End Item slide -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<article class="box box_partner clear bg-white pdtb10" id="khach_hang">
+		<div class="container">
+
+			<div class="row">
+				<div class="box_slider_partner">
+					<div class="box box-img-partner">
+						<a href="#" title="Title">
+							<img src="theme/frontend/images/partent_01.png" alt="Title" class="scaledown">
+						</a>
+					</div>
+					<div class="box box-img-partner">
+						<a href="#" title="Title">
+							<img src="theme/frontend/images/partent_02.png" alt="Title" class="scaledown">
+						</a>
+					</div>
+					<div class="box box-img-partner">
+						<a href="#" title="Title">
+							<img src="theme/frontend/images/partent_03.png" alt="Title" class="scaledown">
+						</a>
+					</div>
+					<div class="box box-img-partner">
+						<a href="#" title="Title">
+							<img src="theme/frontend/images/partent_01.png" alt="Title" class="scaledown">
+						</a>
+					</div>
+					<div class="box box-img-partner">
+						<a href="#" title="Title">
+							<img src="theme/frontend/images/partent_02.png" alt="Title" class="scaledown">
+						</a>
+					</div>
+					<div class="box box-img-partner">
+						<a href="#" title="Title">
+							<img src="theme/frontend/images/partent_03.png" alt="Title" class="scaledown">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+	<article class="box article-1 clear pdtb40 bg-white">
+		<div class="container">
+			<h2 class="title-article pdbt40 text-center">Tại sao bạn nên chọn <span class="txt_highlight">ABSoft ERP</span></h2>
+			<div class="row box-why-should" id="box_why_should">
+				<div class="col-md-6 col-sm-6 col-xs-12 item_service">
+					<div class="box box-img-sevice">
+						<img src="theme/frontend/images/icon_why_01.png" alt="Title" class="responsive">
+					</div>
+					<div class="box box-content">
+						<h3 class="mg0"><a class="title-post-item" href="#" title="Title">Thành lập doanh nghiệp</a></h3>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 item_service">
+					<div class="box box-img-sevice">
+						<img src="theme/frontend/images/icon_why_02.png" alt="Title" class="responsive">
+					</div>
+					<div class="box box-content">
+						<h3 class="mg0"><a class="title-post-item" href="#" title="Title">Dịch vụ kế toán</a></h3>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 item_service">
+					<div class="box box-img-sevice">
+						<img src="theme/frontend/images/icon_why_03.png" alt="Title" class="responsive">
+					</div>
+					<div class="box box-content">
+						<h3 class="mg0"><a class="title-post-item" href="#" title="Title">Dịch vụ thuế</a></h3>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 item_service">
+					<div class="box box-img-sevice">
+						<img src="theme/frontend/images/icon_why_04.png" alt="Title" class="responsive">
+					</div>
+					<div class="box box-content">
+						<h3 class="mg0"><a class="title-post-item" href="#" title="Title">Quyết toán thuế</a></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+
+	<footer class="box" id="height_footer">
+		<div class="footer">
+			<div class="container">
+				<div class="row pdt20">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="widget widget_info_footer mgbt30">
+							<span class="box title-footer line_bottom">Tập đoàn công nghệ ABSOFT</span>
+							<div class="box col-detail-ft">
+								<div class="box-item-detail">
+									<i class="fa fa-location-arrow"></i>
+									<p><span class="bold">Địa chỉ:</span> Tầng 6, Số nhà 86 - Phố Yên Lãng - Quận Đống Đa - Hà Nội.</p>
+								</div>
+								<div class="box-item-detail">
+									<i class="fa fa-phone"></i>
+									<p><span class="bold">Điện thoại:</span> (024) 3873 4888</p>
+								</div>
+								<div class="box-item-detail">
+									<i class="fa fa-envelope"></i>
+									<p><span class="bold">Email:</span> info@absofterp.vn</p>
+								</div>
+								<div class="box-item-detail">
+									<i class="fa fa-envelope"></i>
+									<p><span class="bold">Fanpage:</span> www.facebook.com/ABSoftERP</p>
+								</div>
+								<div class="box-item-detail">
+									<i class="fa fa-envelope"></i>
+									<p><span class="bold">Website:</span> absofterp.vn</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="widget widget_map_footer mgbt30">
+							<span class="box title-footer line_bottom">Bản đồ</span>
+							<div class="box col-map-ft">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.518693743465!2d105.80527801435828!3d21.011921993730155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab602de9caab%3A0x2defdd20ba3f2eac!2zMTY5IE5ndXnhu4VuIE5n4buNYyBWxaksIFRydW5nIEhvw6AsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2sus!4v1513133578363" width="100%" height="200" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 con-xs-12">
+						<p style="line-height: 30px; margin: 0;">Copyright © 2017 <a class="white" href="." title="Title">ABSoft ERP</a> Phần mềm quản trị doanh nghiệp</p>
+					</div>
+					<div class="col-sm-6 col-md-6 con-xs-12">
+						<div class="box socail-footer">
+							<ul class="list-socail">
+								<li class="item-socail f-left link-facebook"><a href="#" rel="nofollow" class="box link-socail"><i class="fa fa-facebook"></i></a></li>
+								<li class="item-socail f-left link-google"><a href="#" rel="nofollow" class="box link-socail"><i class="fa fa-google-plus"></i></a></li>
+								<li class="item-socail f-left link-linkedin"><a href="#" rel="nofollow" class="box link-socail"><i class="fa fa-linkedin"></i></a></li>
+								<li class="item-socail f-left link-twitter"><a href="#" rel="nofollow" class="box link-socail"><i class="fa fa-twitter"></i></a></li>
+								<li class="item-socail f-left link-youtube"><a href="#" rel="nofollow" class="box link-socail"><i class="fa fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Start form contact -->
+	<div id="ABSoftModal" class="modal fade" role="dialog">
+	  	<div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content box_form_contact">
+		      	<div class="modal-body">
+			        <button type="button" class="close nutclose" data-dismiss="modal">&times;</button>
+
+					<div class="form_contact">
+						<div class="box" style="padding: 0 20px;">
+							<div class="box text-center">
+								<img src="theme/frontend/images/logo_absoft.png" alt="Site name">
+							</div>
+							<div class="box mgbt20">
+								<h5 class="box title_frm line_title center uppercase"><strong>Đăng ký ngay để nhận ưu đãi</strong></h5>
+							</div>
+							<form action="" method="post" class="form-horizontal" id="frm_contact">
+								<fieldset>
+
+									<!-- Text input-->
+									<div class="form-group">
+									  <div class="col-md-12">
+									  <input id="contact_name" name="contact_name" type="text" placeholder="Họ và tên" class="form-control input-md" required="">
+									  </div>
+									</div>
+
+									<!-- Text input-->
+									<div class="form-group">
+									  <div class="col-md-12">
+									  <input id="contact_email" name="contact_email" type="email" placeholder="Email" class="form-control input-md">
+									  </div>
+									</div>
+
+									<!-- Text input-->
+									<div class="form-group">
+									  <div class="col-md-12">
+									  <input id="contact_phone" name="contact_phone" type="number" placeholder="Nhập số điện thoại" class="form-control input-md">
+									  </div>
+									</div>
+
+									<!-- Text input-->
+									<div class="form-group">
+									  <div class="col-md-12">
+									  <input id="contact_company" name="contact_company" type="text" placeholder="Công ty" class="form-control input-md">
+									  </div>
+									</div>
+
+									<!-- Text input-->
+									<div class="form-group">
+									  <div class="col-md-12">
+									  <input id="contact_address" name="contact_address" type="text" placeholder="Địa chỉ" class="form-control input-md">
+									  </div>
+									</div>
+
+									<!-- Select Basic -->
+									<div class="form-group">
+									  <div class="col-md-12">
+									    <select id="selectbasic" name="selectbasic" class="form-control">
+									      <option value="">Chọn gói giải pháp</option>
+									      <option value="1">Giải pháp 1</option>
+									      <option value="2">Giải pháp 2</option>
+									    </select>
+									  </div>
+									</div>
+
+									<!-- Textarea -->
+									<div class="form-group">
+									  <div class="col-md-12">
+									    <textarea class="form-control contact_content" id="contact_content" name="contact_content" rows="3" placeholder="Để lại lời nhắn cho chúng tôi..."></textarea>
+									  </div>
+									</div>
+
+									<!-- Button -->
+									<div class="form-group" style="margin-bottom: 0 !important;">
+									  <div class="col-md-12">
+									    <button id="singlebutton" name="singlebutton" class="div btn btn-action">Đăng ký</button>
+									  </div>
+									</div>
+
+								</fieldset>
+							</form>
+						</div>
+					</div>
+			        
+		      	</div>
+
+			</div>
+
+	  	</div>
+	</div>
+	<!-- End form contact -->
+
+
+	<div id="goTop" >
+		<div class="go_top" title="Lên trên">
+			<i class="fa fa-arrow-up" aria-hidden="true"></i>
+		</div>
+	</div>
+
+
+	<div class="hidden-lg hidden-md" id="hotline">
+		<div class="btn_hotline" title="Gọi ngay">
+			<img src="theme/frontend/images/hotline.png" alt="Gọi ngay" class="scaledown">
+		</div>
+	</div>
+
+	<div class="hidden-sm hidden-xs" id="link_socail">
+		<div class="box_link_socail">
+			<div class="item-socail socail-phone">
+				<a href="tel:0966399367" title="Title" rel="nofllow">
+					<i class="fa fa-phone"></i>
+				</a>
+				<div class="box-tel-phone">
+					<p>0966.399.367</p>
+					<p>0964.094.499</p>
+				</div>
+			</div>
+			<div class="item-socail">
+				<a href="#" title="Title" rel="nofllow">
+					<i class="fa fa-google-plus"></i>
+				</a>
+			</div>
+			<div class="item-socail">
+				<a href="#" title="Title" rel="nofllow">
+					<i class="fa fa-linkedin"></i>
+				</a>
+			</div>
+			<div class="item-socail">
+				<a href="#" title="Title" rel="nofllow">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</div>
+			<div class="item-socail">
+				<a href="#" title="Title" rel="nofllow">
+					<i class="fa fa-youtube"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		$(document).ready(function(){
+
+             var delay = ( function() {
+                  var timer = 0;
+                  return function(callback, ms) {
+                      clearTimeout (timer);
+                      timer = setTimeout(callback, ms);
+                  };
+              })();
+              Usage:
+
+              delay(function(){
+                   $('#ABSoftModal').modal('show');
+              }, 10000 ); 
+      	})
+	</script>
+
+	<script src="theme/frontend/js/menu-mobile.min.js" defer></script>
+	<script src="theme/frontend/js/wow.js" defer></script>
+	<script src="theme/frontend/js/owl.carousel.min.js" defer></script>
+	<script src="theme/frontend/js/OwlCarousel2Thumbs.min.js" defer></script>
+	<script src="theme/frontend/js/smoothscroll.js"></script>
+	<script async src="theme/frontend/js/script.js" defer></script>
+	<script async src="theme/frontend/js/jquery.sticky.min.js" defer></script>
+
+</body>
+</html>
