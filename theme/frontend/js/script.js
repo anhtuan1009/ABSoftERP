@@ -1,13 +1,12 @@
-
 $(document).ajaxStart(function() {
    $('.load').fadeIn(300);
 });
 $(document).ajaxComplete(function(event, xhr, settings) {
     $('.load').delay(500).fadeOut(500);
 });
-$(window).load(function(){
+window.onload = (event) => {
     $('.load').fadeOut(1000);
-});
+};
 
 // Scroll to specific values
 // scrollTo is the same
@@ -25,11 +24,9 @@ window.scrollBy({
 });
 
 function scrollDiv(id){
-
     $('html,body').animate({
        scrollTop: $("#"+id).offset().top - 90
     },1000);
-
 }
 
 $("#btn-buy").click(function(){
@@ -85,7 +82,7 @@ $(window).scroll(function() {
         $(".primary-menu").removeClass("scroll-fixed");
     }
 });
-jQuery(function($) {
+$(document).ready(function() {
 	
     var wow = new WOW({offset:50,mobile:false}); wow.init();
 
@@ -116,8 +113,8 @@ jQuery(function($) {
             992:{items:4 },
             1200:{items:5 },
         },
-        thumbs: false,
-        thumbImage: false,
+        // thumbs: false,
+        // thumbImage: false,
         // thumbsPrerendered: false,
         // thumbContainerClass: 'owl-thumbs',
         // thumbItemClass: 'owl-thumb-item'
